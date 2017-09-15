@@ -11,13 +11,13 @@ package br.rj.mace.femass.cookbook.Modelo;
  */
 public class Receita {
     
-    private int id;
+    private Integer id;
     private String nome;
     private String ingredientes;
     private String preparo;
     private String servir;
 
-    public Receita(int id, String nome, String ingredientes, String preparo, String servir) {
+    public Receita(Integer id, String nome, String ingredientes, String preparo, String servir) {
         this.id = id;
         this.nome = nome;
         this.ingredientes = ingredientes;
@@ -25,11 +25,11 @@ public class Receita {
         this.servir = servir;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -64,7 +64,10 @@ public class Receita {
     public void setServir(String servir) {
         this.servir = servir;
     }
-    
-    
+ 
+    @Override
+    public String toString() {
+        return this.nome;  
+    }
     
 }
