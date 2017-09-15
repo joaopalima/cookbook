@@ -145,18 +145,15 @@ public class Receita extends javax.swing.JFrame {
                     .addGap(31, 31, 31)
                     .addComponent(jLabel2)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(287, Short.MAX_VALUE)))
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(275, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void lstReceitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstReceitasMouseClicked
-        Receita r = (Receita) lstReceitas.getSelectedValue();
-        txtNome.setText(r.getNome());
-        txtIngredientes.setText(r.getIngredientes());
-        txtPreparo.setText(r.getPreparo());
+
 
     }//GEN-LAST:event_lstReceitasMouseClicked
 
