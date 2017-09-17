@@ -13,14 +13,14 @@ public class Receita {
     
     private Integer id;
     private String nome;
-    private String ingredientes;
+    private String ingrediente;
     private String preparo;
     private String servir;
 
-    public Receita(Integer id, String nome, String ingredientes, String preparo, String servir) {
+    public Receita(Integer id, String nome, String ingrediente, String preparo, String servir) {
         this.id = id;
         this.nome = nome;
-        this.ingredientes = ingredientes;
+        this.ingrediente = ingrediente;
         this.preparo = preparo;
         this.servir = servir;
     }
@@ -41,12 +41,12 @@ public class Receita {
         this.nome = nome;
     }
 
-    public String getIngredientes() {
-        return ingredientes;
+    public String getIngrediente() {
+        return ingrediente;
     }
 
-    public void setIngredientes(String ingredientes) {
-        this.ingredientes = ingredientes;
+    public void setIngrediente(String ingrediente) {
+        this.ingrediente = ingrediente;
     }
 
     public String getPreparo() {
