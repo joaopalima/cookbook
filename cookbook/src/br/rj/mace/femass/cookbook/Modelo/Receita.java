@@ -16,6 +16,7 @@ public class Receita {
     private String ingrediente;
     private String preparo;
     private String servir;
+    private Categoria categoria;
 
     public Receita(Integer id, String nome, String ingrediente, String preparo, String servir) {
         this.id = id;
@@ -64,7 +65,16 @@ public class Receita {
     public void setServir(String servir) {
         this.servir = servir;
     }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
  
+    public void setCategoria(Categoria c){
+        this.categoria = c;
+        c.setReceita(this);
+    }
+    
     @Override
     public String toString() {
         return this.nome;  

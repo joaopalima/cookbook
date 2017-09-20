@@ -18,6 +18,7 @@ public class CookbookConexao {
         Connection conn=null;
         try { 
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/coocbook","postgres","joao"); 
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "12345678");
                         
        } catch(SQLException e) {
             e.printStackTrace();
