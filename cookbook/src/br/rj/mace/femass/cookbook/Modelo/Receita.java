@@ -13,20 +13,12 @@ public class Receita {
     
     private Integer id;
     private String nome;
-    private String ingrediente;
+    private Ingrediente ingrediente;
     private String preparo;
     private String servir;
     private Categoria categoria;
     
-
-    public Receita(Integer id, String nome, String ingrediente, String preparo, String servir) {
-        this.id = id;
-        this.nome = nome;
-        this.ingrediente = ingrediente;
-        this.preparo = preparo;
-        this.servir = servir;
-    }
-
+    
     public Integer getId() {
         return id;
     }
@@ -43,11 +35,11 @@ public class Receita {
         this.nome = nome;
     }
 
-    public String getIngrediente() {
+    public Ingrediente getIngrediente() {
         return ingrediente;
     }
 
-    public void setIngrediente(String ingrediente) {
+    public void setIngrediente(Ingrediente ingrediente) {
         this.ingrediente = ingrediente;
     }
 
@@ -75,7 +67,17 @@ public class Receita {
         this.categoria = c;
         c.setReceita(this);
     }
+
+    public Receita(Integer id, String nome, Ingrediente ingrediente, String preparo, String servir, Categoria categoria) {
+        this.id = id;
+        this.nome = nome;
+        this.ingrediente = ingrediente;
+        this.preparo = preparo;
+        this.servir = servir;
+        this.categoria = categoria;
+    }
     
+
     @Override
     public String toString() {
         return this.nome;  

@@ -9,14 +9,8 @@ package br.rj.mace.femass.cookbook.Modelo;
  *
  * @author jorge
  */
-public class Igrediente {
-    
-    private Integer id;
-    private String nome;
-    private String descricao;
-    private Receita receita;
-    
-    
-    
+public class Receita_Ingrediente {
+    private String quantidade;
+    private String unidade;
     
 }
