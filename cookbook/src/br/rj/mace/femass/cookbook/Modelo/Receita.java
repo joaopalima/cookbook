@@ -17,6 +17,7 @@ public class Receita {
     private String preparo;
     private String servir;
     private Categoria categoria;
+    
 
     public Receita(Integer id, String nome, String ingrediente, String preparo, String servir) {
         this.id = id;
