@@ -5,6 +5,8 @@
  */
 package br.rj.mace.femass.cookbook.Modelo;
 
+import java.util.List;
+
 /**
  *
  * @author jorge
@@ -13,12 +15,11 @@ public class Receita {
     
     private Integer id;
     private String nome;
-    private Ingrediente ingrediente;
     private String preparo;
     private String servir;
     private Categoria categoria;
-    
-    
+    private List<Ingrediente> ingredientes;
+
     public Integer getId() {
         return id;
     }
@@ -33,14 +34,6 @@ public class Receita {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Ingrediente getIngrediente() {
-        return ingrediente;
-    }
-
-    public void setIngrediente(Ingrediente ingrediente) {
-        this.ingrediente = ingrediente;
     }
 
     public String getPreparo() {
@@ -62,25 +55,33 @@ public class Receita {
     public Categoria getCategoria() {
         return categoria;
     }
- 
-    public void setCategoria(Categoria c){
-        this.categoria = c;
-        c.setReceita(this);
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
-    public Receita(Integer id, String nome, Ingrediente ingrediente, String preparo, String servir, Categoria categoria) {
+    public List<Ingrediente> getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(List<Ingrediente> ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    public Receita(Integer id, String nome, String preparo, String servir, Categoria categoria, List<Ingrediente> ingredientes) {
         this.id = id;
         this.nome = nome;
-        this.ingrediente = ingrediente;
         this.preparo = preparo;
         this.servir = servir;
         this.categoria = categoria;
+        this.ingredientes = ingredientes;
     }
     
-
+    
     @Override
     public String toString() {
         return this.nome;  
     }
+    
     
 }

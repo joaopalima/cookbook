@@ -23,7 +23,7 @@ public class ReceitaDao {
         public static void cadastrar(Object r) throws SQLException {
             
         Receita receita = (Receita) r;
-        String sql = "insert into receita (nome, ingredientes, preparo, servir) values (?,?,?,?)";
+        String sql = "insert into receita (nome, ingrediente, preparo, servir) values (?,?,?,?)";
         PreparedStatement stmt = CookbookConexao.getConexao().prepareStatement(sql);
         
         stmt.setString(1, receita.getNome());
