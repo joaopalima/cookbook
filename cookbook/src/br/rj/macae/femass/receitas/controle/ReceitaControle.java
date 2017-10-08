@@ -6,8 +6,6 @@
 package br.rj.macae.femass.receitas.controle;
 
 
-import br.rj.mace.femass.cookbook.Dao.ReceitaDao;
-import br.rj.mace.femass.cookbook.Modelo.Receita;
 import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JList;
